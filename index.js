@@ -1,3 +1,4 @@
+
 var scenic = document.querySelectorAll(".scenic li");
 var picture = document.querySelectorAll(".picture li");
 for (var i = 0; i < scenic.length; i++) {
