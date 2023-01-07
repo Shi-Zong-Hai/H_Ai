@@ -23,12 +23,25 @@
     </div>
     <div class="picture">
         <ul>
-            <li><img src=".\images\a1.webp" alt=""></li>
-            <li style="display:none"><img src=".\images\a2.webp" alt=""></li>
-            <li style="display:none"><img src=".\images\a3.webp" alt=""></li>
+            <li><img src="C:\Users\Shizonghai\Pictures\景区图片\a1.webp" alt=""></li>
+            <li style="display:none"><img src="C:\Users\Shizonghai\Pictures\景区图片\a2.webp" alt=""></li>
+            <li style="display:none"><img src="C:\Users\Shizonghai\Pictures\景区图片\a3.webp" alt=""></li>
         </ul>
 
     </div>
+    <script>
+        var scenic = document.querySelectorAll(".scenic li");
+        var picture = document.querySelectorAll(".picture li");
+        for (var i = 0; i < scenic.length; i++) {
+            scenic[i].setAttribute("index", i);
+            scenic[i].addEventListener("click", function () {
+                for (var j = 0; j < picture.length; j++) {
+                    picture[j].style.display = "none";
+                }
+                picture[this.getAttribute('index')].style = "block";
+            })
+        }
+    </script>
 </body>
 
 </html>
